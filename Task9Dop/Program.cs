@@ -12,6 +12,7 @@ while (N <= 1000)
     {
         if (num1 < 2 | num1 > 9 | num1 % 1 != 0)
         {
+            Console.WriteLine(" ");
             Console.WriteLine("Ошибка. Число должно быть целым, в промежутке от 2 до 9.");
             Console.WriteLine(" ");
             Console.WriteLine("Игрок 1. Введите повторно целое число от 2 до 9.");
@@ -34,6 +35,7 @@ while (N <= 1000)
         {
             if (num2 < 2 | num2 > 9 | num2 % 1 != 0)
             {
+                Console.WriteLine(" ");
                 Console.WriteLine("Ошибка. Число должно быть целым, в промежутке от 2 до 9.");
                 Console.WriteLine(" ");
                 Console.WriteLine("Игрок 2. Введите повторно целое число от 2 до 9.");
