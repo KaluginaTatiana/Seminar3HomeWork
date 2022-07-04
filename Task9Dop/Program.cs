@@ -2,12 +2,22 @@
 // второй умножает его на любое натуральное число от 2 до 9, 
 // первый умножает результат на любое натуральное число от 2 до 9 и т. д. 
 // Выигрывает тот, у кого впервые получится число больше 1000. Запрограммировать консольный вариант игры.
-int N = 1;
-int num1, num2;
+double N = 1;
+double num1, num2;
 while (N <= 1000)
 {
-    Console.WriteLine("Игрок 1. Введите число от 2 до 9.");
-    num1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Игрок 1. Введите целое число от 2 до 9.");
+    num1 = Convert.ToDouble(Console.ReadLine());
+    while (num1 < 2 | num1 > 9 | num1 % 1 != 0)
+    {
+        if (num1 < 2 | num1 > 9 | num1 % 1 != 0)
+        {
+            Console.WriteLine("Ошибка. Число должно быть целым, в промежутке от 2 до 9.");
+            Console.WriteLine(" ");
+            Console.WriteLine("Игрок 1. Введите повторно целое число от 2 до 9.");
+            num1 = Convert.ToDouble(Console.ReadLine());
+        }
+    }       
     N = N * num1;
     Console.WriteLine("Результат = " + N + ".");
     if (N > 1000)
@@ -18,8 +28,18 @@ while (N <= 1000)
     }
     else
     {
-        Console.WriteLine("Игрок 2. Введите число от 2 до 9.");
-        num2 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Игрок 2. Введите целое число от 2 до 9.");
+        num2 = Convert.ToDouble(Console.ReadLine());
+        while (num2 < 2 | num2 > 9 | num2 % 1 != 0)
+        {
+            if (num2 < 2 | num2 > 9 | num2 % 1 != 0)
+            {
+                Console.WriteLine("Ошибка. Число должно быть целым, в промежутке от 2 до 9.");
+                Console.WriteLine(" ");
+                Console.WriteLine("Игрок 2. Введите повторно целое число от 2 до 9.");
+                num2 = Convert.ToDouble(Console.ReadLine());
+            }
+        }
         N = N * num2;
         Console.WriteLine("Результат = " + N + ".");
         if (N > 1000)
