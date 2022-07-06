@@ -6,6 +6,6 @@
 Console.WriteLine("Введите пятизначное число.");
 string n = Console.ReadLine();
 if (n[0] == n[4] && n[1] == n[3])
-Console.WriteLine("Число " + n + " является палиндромом.");
+    Console.WriteLine("Число " + n + " является палиндромом.");
 else
-Console.WriteLine("Число " + n + " не является палиндромом.");
+    Console.WriteLine("Число " + n + " не является палиндромом.");
