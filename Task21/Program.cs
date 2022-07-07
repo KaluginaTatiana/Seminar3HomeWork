@@ -16,6 +16,8 @@ Console.Write("y = ");
 double y2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("z = ");
 double z2 = Convert.ToDouble(Console.ReadLine());
+//double dist = Math.Round(Math.Sqrt(Math.Pow(z1 -z2, 2) + Math.Pow(Math.Round(Math.Sqrt(Math.Pow(x1 -x2, 2) + Math.Pow(y1 -y2, 2)), 2), 2)), 2);
+
 double dist = Distance(x1, y1, z1, x2, y2, z2);
 
 double Distance(double xa, double ya, double za, double xb, double yb, double zb)
