@@ -7,12 +7,10 @@ void FillArray(int[] collection)
 {
     int length = 10;
     int index = 0;
-    int num = 1;
     while (index < length)
     {
-        collection[index] = num;
+        collection[index] = index + 1;
         index++;
-        num++;
     }
 }
 
