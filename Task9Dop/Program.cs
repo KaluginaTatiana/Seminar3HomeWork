@@ -4,7 +4,8 @@
 // Выигрывает тот, у кого впервые получится число больше 1000. Запрограммировать консольный вариант игры.
 double N = 1;
 double num1, num2;
-while (N <= 1000)
+double max = 1000;
+while (N <= max)
 {
     Console.WriteLine("Игрок 1. Введите целое число от 2 до 9.");
     num1 = Convert.ToDouble(Console.ReadLine());
@@ -21,7 +22,7 @@ while (N <= 1000)
     }       
     N = N * num1;
     Console.WriteLine("Результат = " + N + ".");
-    if (N > 1000)
+    if (N > max)
     {
         Console.WriteLine(" ");
         Console.WriteLine("Выиграл Игрок 1!");
@@ -44,7 +45,7 @@ while (N <= 1000)
         }
         N = N * num2;
         Console.WriteLine("Результат = " + N + ".");
-        if (N > 1000)
+        if (N > max)
         {
             Console.WriteLine(" ");
             Console.WriteLine("Выиграл Игрок 2!");
