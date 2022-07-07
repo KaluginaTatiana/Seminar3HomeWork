@@ -16,17 +16,12 @@ Console.Write("y = ");
 double y2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("z = ");
 double z2 = Convert.ToDouble(Console.ReadLine());
-double dist = Distance(x1, y1, x2, y2);
-double dist3D = Distance3D(z1, z2, dist);
-Console.WriteLine("Расстояние между точками А и В равно " + dist3D + ".");
+double dist = Distance(x1, y1, z1, x2, y2, z2);
 
-double Distance(double xa, double ya, double xb, double yb)
+double Distance(double xa, double ya, double za, double xb, double yb, double zb)
 {
-    double distance = Math.Round(Math.Sqrt(Math.Pow(xa -xb, 2) + Math.Pow(ya -yb, 2)), 2);
+    double distance = Math.Round(Math.Sqrt((xa - xb) * (xa -xb) + (ya -yb) * (ya - yb) + (za - zb) * (za -zb)), 2);
     return distance;
 }
-double Distance3D(double za, double zb, double distance)
-{
-    double distance3D = Math.Round(Math.Sqrt(Math.Pow(za -zb, 2) + Math.Pow(distance, 2)), 2);
-    return distance3D;
-}
+
+Console.WriteLine("Расстояние между точками А и В равно " + dist + ".");
